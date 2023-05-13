@@ -1,0 +1,23 @@
+{% extends 'base_qcm.html' %}
+
+{% block content %}
+<h1>{% block title %} Créer une nouvelle question {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Nouvelle question</label>
+        <input type="text" name="title"
+               placeholder="Question" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Nouvelle réponse</label>
+        <textarea name="content" placeholder="Réponse"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Créer</button>
+    </div>
+</form>
+{% endblock %}

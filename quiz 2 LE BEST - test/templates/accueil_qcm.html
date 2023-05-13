@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Assessment GITHUB</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="start_btn"><button>Commencer le QCM</button></div>
+    <div class="admin_btn"><a href="admin"><button>Espace admin</button></a></div>
+    <form method='post'><div class="random_btn"><button>Random Questions pour générer un nouveau QCM</button></div></form>
+
+    <div class="info_box">
+        <div class="info-title"><span>Réglement</span></div>
+        <div class="info-list">
+            <div class="info">1. Vous aurez seulement <span>15 secondes</span> pour chaque question.</div>
+            <div class="info">2. Une fois la réponse entré, cliquer sur le bouton du dessus pour valider.</div>
+            <div class="info">3. Vous ne pourriez répondre à aucune question quand le temps sera écoulé.</div>
+            <div class="info">4. Ne sortez pas du Test avant de l'avoir fini.</div>
+            <div class="info">5. 1 bonne réponse = 1 point, pas de malus.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Quitter</button>
+            <button class="restart">Continuer</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Github QCM</div>
+            <div class="timer">
+                <div class="time_left_txt">Temps restant</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn">Suivant</button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">QCM Terminé !</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">A une prochaine fois !</button>
+            <button class="quit">Quitter</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='questions.js') }}"></script>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'base_qcm.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ post['question'] }} {% endblock %}</h2>
+    <span class="badge badge-primary">{{ post['answer'] }}</span>
+    {% for opt in option %}
+        <p>{{ opt['option'] }}</p>
+    {% endfor %}
+{% endblock %}
